@@ -7,4 +7,12 @@ const getMaxCalories = (str) => {
     return Math.max(...formattedStr);
 }
 
-console.log(getMaxCalories(input));
+const getThirdElves = (str) => {
+    let formattedStr = str.split("\n\n").map(item => item.split("\n"));
+    formattedStr = formattedStr.map((elf) => elf.map((item) => +item));
+    formattedStr = formattedStr.map((elf) => elf.reduce((acc, curr) => acc + curr));
+    formattedStr = formattedStr.sort((a, b) => b - a);
+    return (formattedStr[0] + formattedStr[1] + formattedStr[2]);
+}
+
+console.log(getThirdElves(input));
