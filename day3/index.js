@@ -64,7 +64,7 @@ const sumOfPrioritiesItemsOrBadges = (itemsOrBadges) => {
     index = 0;
     for (index; index < rucksacks.length; index++) {
         done = false;
-        "badges" === itemsOrBadges ? getSumOfPrioritiesBadges(rucksacks[index]) : getSumOfPrioritiesItems(rucksacks[index]);
+        "badges" === itemsOrBadges ? getSumOfPrioritiesBadges() : getSumOfPrioritiesItems(rucksacks[index]);
     }
     return sum;
 }
